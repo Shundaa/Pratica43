@@ -25,5 +25,10 @@ public class Quadrado implements FiguraComLados {
     public double getLadoMaior() {
         return lado;
     }
+
+    @Override
+    public String getNome() {
+        return super.toString() + " [" + lado + " x " + lado + "]";
+    }
     
 }

@@ -27,5 +27,10 @@ public class Retangulo  implements FiguraComLados {
     public double getLadoMaior() {
         return ladoMaior;
     }
+
+    @Override
+    public String getNome() {
+        return super.toString() + " [" + ladoMenor + " x " + ladoMaior + "]";
+    }
     
 }
