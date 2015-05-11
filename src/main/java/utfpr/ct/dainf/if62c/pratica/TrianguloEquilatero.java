@@ -5,33 +5,32 @@ package utfpr.ct.dainf.if62c.pratica;
  * Exemplo de interface em Java.
  * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
  */
-public class TrianguloEquilatero implements FiguraComLados {
-    
-    private double lado;
-    public TrianguloEquilatero (double lado) {
+public class TrianguloEquilatero extends Retangulo {
+    public double lado;
+    public double altura;
+
+    public TrianguloEquilatero(double lado) {
+        super(lado, lado * Math.sqrt(3) / 2);
         this.lado=lado;
+        this.altura=lado * Math.sqrt(3) / 2;
     }
+
     @Override
-    public double getArea(){
-        return ((lado*lado*Math.sqrt(3))/4);
+    public double getArea() {
+        return base*altura/ 2;
     }
+
     @Override
-    public double getPerimetro(){
-        return lado*3;
+    public double getPerimetro() {
+        return 3 * lado;
     }
-    @Override
-    public double getLadoMenor() {
+
+    public double getLado() {
         return lado;
     }
 
-    @Override
-    public double getLadoMaior() {
-        return lado;        
+    public String getNome() {
+        return getNome() + " [" + lado + "]";
     }
 
-    @Override
-    public String getNome() {
-        return super.toString() + " [" + lado + " x " + lado + "]";
-    }
-    
 }

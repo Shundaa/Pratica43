@@ -5,32 +5,24 @@ package utfpr.ct.dainf.if62c.pratica;
  * Exemplo de interface em Java.
  * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
  */
-public class Quadrado implements FiguraComLados {
-    private double lado;
-    public Quadrado (double lado) {
+public class Quadrado extends Retangulo {
+    public double lado;
+    public Quadrado(double lado) {
+        super(lado,lado);
         this.lado=lado;
     }
+    
     @Override
-    public double getArea(){
+    public double getArea() {
         return lado*lado;
     }
-    @Override
-    public double getPerimetro(){
-        return 4*lado;
-    }
-    @Override
-    public double getLadoMenor() {
-        return lado;
-    }
 
     @Override
-    public double getLadoMaior() {
-        return lado;
+    public double getPerimetro() {
+        return lado * 4;
     }
 
-    @Override
-    public String getNome() {
-        return super.toString() + " [" + lado + " x " + lado + "]";
-    }
+
     
+
 }
