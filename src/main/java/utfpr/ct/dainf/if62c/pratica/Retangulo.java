@@ -12,9 +12,11 @@ public class Retangulo  implements FiguraComLados {
         this.ladoMenor=ladoMenor;
         this.ladoMaior=ladoMaior;
     }
+    @Override
     public double getArea(){
         return ladoMenor*ladoMaior;
     }
+    @Override
     public double getPerimetro(){
         return 2*(ladoMenor+ladoMaior);
     }

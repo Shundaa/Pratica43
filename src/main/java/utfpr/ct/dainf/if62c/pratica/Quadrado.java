@@ -10,9 +10,11 @@ public class Quadrado implements FiguraComLados {
     public Quadrado (double lado) {
         this.lado=lado;
     }
+    @Override
     public double getArea(){
         return lado*lado;
     }
+    @Override
     public double getPerimetro(){
         return 4*lado;
     }

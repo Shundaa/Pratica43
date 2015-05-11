@@ -11,9 +11,11 @@ public class TrianguloEquilatero implements FiguraComLados {
     public TrianguloEquilatero (double lado) {
         this.lado=lado;
     }
+    @Override
     public double getArea(){
         return ((lado*lado*Math.sqrt(3))/4);
     }
+    @Override
     public double getPerimetro(){
         return lado*3;
     }
